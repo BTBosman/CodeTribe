@@ -1,0 +1,84 @@
+
+#showcase{
+    min-height: 400px;
+    max-height: 600px;
+    background-image: url('/assets/images/island2.jpg');
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+}
+
+#showcase h2{
+    font-size: 45px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+#showcase p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.home-header{
+    width: 100%;
+    background-color: #0960bd;
+    color: aliceblue;
+    font-size: 1em;
+    text-align: center;
+}
+
+.back-image{
+    min-height: 400px;
+    height: 600px;
+
+}
+
+.single {
+    width: 50%;
+    padding: 10px;
+    float:center;
+    background-color: lightgray; 
+}
+
+.double {
+    background-color: lightgray;
+    width: 55%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* boxes */
+#boxes {
+    margin:0;
+}
+
+#boxes .box {
+    background-color: lightblue;
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+boxes .box img {
+    width:90px;
+}

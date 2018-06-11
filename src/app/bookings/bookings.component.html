@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div id="container">
+        <div ng-app=" ">
+                <header>
+                        <h1>MAKE A BOOKING TODAY!!!</h1>
+                    </header>
+                <div ng-app="">
+                      <legend>Booking Form: </legend>
+                      <div class="form-group">
+                        <label for="firstName">First Name: </label>
+                        <input id="firstName" type="text" class="form-control" required #firstName required minlength="3" maxlength="30" required autofocus  placeholder="Your First Name:" pattern="[a-zA-Z]{3,}" title="Please enter in more than three letters" #firstName>
+                        <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                            <div [hidden]="!firstName.errors.required">
+                                First name is required!
+                            </div>
+                            <div [hidden]="!firstName.errors.minlength">
+                                First name must be at least 3 characers long.
+                            </div>
+                            <div [hidden]="!firstName.errors.maxlength">
+                                First name cannot be more than 30 characters long.  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="lastName">Last Name: </label>
+                            <input id="lastName" type="text" class="form-control" required #lastName required autofocus placeholder="Your Last Name:" pattern="[a-zA-Z]{3,}" title="Please enter in more than three letters" #lastName>
+                        </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="text" id="email" class="form-control" required #email required placeholder="Your Email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2}" title="Please enter in a valid email address" #email>
+                    </div>
+                    <div class="form-group">
+                            <label for="date">CHOOSE DATE AND ARRIVAL TIME: </label>
+                            <input id="date" type="datetime-local" min="2018-06-01" class="form-control" required #date>
+                        </div>
+                        <hr>
+                        <label>NUMBER OF GUESTS: </label>
+                        <select id="guests" name="guests" required #guests>
+                                <option value="1-2 guests">1-2 guests</option>
+                                <option value="2-4 guests">2-4 guests</option>
+                                <option value="4-6 guests">4-6 guests</option>
+                              </select>
+                        <hr>   
+                        <label for="beds">Beds</label>
+                <select id="beds" name="beds" required #beds>
+                  <option value="1 single">1 single</option>
+                  <option value="2 singles">2 singles</option>
+                  <option value="Double bed">Double bed</option>
+                </select>
+                <button routerLink="/confirmation" (click)="Book(firstName.value, lastName.value, email.value, date.value, guests.value, beds.value)" id="displayText" style="display: block; margin: 0 auto;">Book</button>
+                    <!--<input type="submit" value="Submit">-->     
+                    <ul ngfor="let aa of arrayName">
+                            {{aa.firstName}} {{aa.lastName}} {{aa.email}}
+                    </ul> 
+                  </div>
+        </div>
+    </div>
+        
+</body>

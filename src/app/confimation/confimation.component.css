@@ -1,0 +1,14 @@
+table {
+    padding:0;
+    margin: 1em;
+    width:100%;
+    height:30vh;
+    text-align: center;
+    border: 2px soild grey;
+}
+
+.summary {
+    text-align: center;
+    border: 2px solid grey;
+    border-style: double;
+}

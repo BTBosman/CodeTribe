@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="summary">
+    <header class="head-form">
+        <h2>Summary</h2>
+    </header>
+    <table>
+      <tr>
+        <th>Customer Information:</th>
+        <th>Number of guests:</th>
+        <th>Beds:</th>
+        <th>Date of arrival:</th>
+        </tr>
+        <tr>
+        <td>Name: {{firstName}}</td>
+        <td>{{date}}</td>
+        <td>{{beds}}</td>
+        <td>{{guests}}</td>
+      </tr>
+      <tr>Surname: {{lastName}}</tr>
+      <tr>Email Address: {{email}}</tr>
+    </table>  
+    <ul ngfor="let a of arrayName">
+        {{a.firstName}} {{a.lastName}} {{a.email}}
+    </ul>   
+  </div>
+  <button (click)="remove(a)">Remove</button>
+    <h3>You will recieve an email confirmation of you booking.
+    <div>Have a Nice Day</div>
+  </h3>
+
+  </body>
+</html>
